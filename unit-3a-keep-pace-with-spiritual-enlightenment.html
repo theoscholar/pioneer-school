@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 (a) — Keep Pace With Spiritual Enlightenment — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+
+  /* collapsible How-to */
+  details.howto{padding:0;}
+  details.howto>summary{cursor:pointer; list-style:none; padding:11px 18px; font-size:1.02em;
+    font-weight:700; letter-spacing:0; user-select:none; display:flex; align-items:center; gap:9px;}
+  details.howto>summary::-webkit-details-marker{display:none;}
+  details.howto>summary::before{content:"\25B6"; font-size:.75em; opacity:.65; transition:transform .15s;}
+  details.howto[open]>summary::before{transform:rotate(90deg);}
+  details.howto>summary:hover{color:var(--sayb);}
+  details.howto ul{margin:.1em 0 2px; padding:0 20px 14px 2.5em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 3 (a)</p>
+    <h1>Keep Pace With Spiritual Enlightenment</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14) and the New World Translation.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li><b>Heart of it</b> lines give the big idea before the questions.</li>
+      <li><b>Blue links open the source</b> on the Watchtower Online Library; the book's cited references sit in the "&#128269; Look it up" line.</li>
+      <li>Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Opening Discussion <span class="n">&middot; light that keeps growing</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jehovah reveals truth a little at a time, like a sunrise that keeps getting brighter. Our job is to keep walking forward in that growing light.</p>
+      <p>Even Jesus' own disciples still had much to learn &mdash; deep questions (like who could share in the new covenant) needed holy spirit to unlock. Jesus promised such truths would be revealed <strong>progressively</strong>. Jehovah still sheds light today, refining us in teaching, conduct, and organization.</p>
+      <div class="scrip"><a class="wol ref" data-q="Proverbs 4:18">Proverbs 4:18</a> &mdash; "The path of the righteous is like the bright morning light that grows brighter and brighter until full day."</div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How is Jehovah the Source of all spiritual enlightenment, and why appreciate that he reveals things progressively?</p>
+        <p class="ans">All light comes from him &mdash; "in your light we see light." He reveals truth step by step so we're never overwhelmed, and each new flash deepens our appreciation.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Psalm 43:3">Ps. 43:3</a><span class="sep">&middot;</span><a class="wol" data-q="Isaiah 42:6, 7">Isa. 42:6, 7</a><span class="sep">&middot;</span><a class="wol" data-q="Proverbs 4:18">Prov. 4:18</a><span class="sep">&middot;</span><a class="wol" data-q="John 16:12">John 16:12</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What was Jesus' role in illuminating Jehovah's purposes?</p>
+        <p class="ans">Jesus is "the <strong>light of the world</strong>" &mdash; he reflected and taught his Father's truth, and through him "the light of the knowledge of God's glory" shines on us.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="John 9:5">John 9:5</a><span class="sep">&middot;</span><a class="wol" data-q="John 12:35">John 12:35</a><span class="sep">&middot;</span><a class="wol" data-q="2 Corinthians 4:6">2 Cor. 4:6</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">True Worshippers in the First Century <span class="n">&middot; the pattern</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> When new light came, first-century Christians didn't resist &mdash; they trusted the arrangement Jehovah was using and moved ahead together.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How did responsible brothers respond to progressive enlightenment, and on what basis did the governing body decide?</p>
+        <p class="ans">Faced with the circumcision issue, they gathered, weighed the <strong>Scriptures and the evidence of holy spirit</strong>, and reached a united decision &mdash; "the holy spirit and we ourselves have favored."</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Acts 15:7-12">Acts 15:7-12</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How were the decisions shared, and how did Christians show willingness to walk by spirit?</p>
+        <p class="ans">The decrees were <strong>delivered to the congregations</strong>, and the brothers gladly accepted them &mdash; so the congregations "continued to be made firm... and to increase in number."</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Acts 16:4, 5">Acts 16:4, 5</a><span class="sep">&middot;</span><a class="wol" data-q="Acts 15:25-31">Acts 15:25-31</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">True Worshippers Today <span class="n">&middot; refined and blessed</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jehovah uses "the faithful and discreet slave" to feed us today. Refinements in teaching, morals, and organization are proof of his loving guidance.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Whom did Jesus appoint to feed his sheep, and why does studying prophecy build faith?</p>
+        <p class="ans">Jesus appointed "the <strong>faithful and discreet slave</strong>" to give spiritual food at the proper time. Studying fulfilled prophecy shows Jehovah keeps his word &mdash; even angels longed to peer into these things.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="w13 7/15 p. 22">w13 7/15 p. 22, par. 10</a><span class="sep">&middot;</span><a class="wol" data-q="1 Peter 1:10-12">1 Pet. 1:10-12</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How have doctrinal and moral refinements benefited us?</p>
+        <p class="ans">Clearer understanding of God's <strong>spiritual temple</strong> and of texts like Ezekiel 38, the fruitage of the spirit, and the model prayer has sharpened our faith. Refinements in morality help God's people glorify his name "in word and deed."</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="w10 7/15 p. 22">w10 7/15 p. 22</a><span class="sep">&middot;</span><a class="wol" data-q="Ezekiel 38:2, 4">Ezek. 38:2, 4</a><span class="sep">&middot;</span><a class="wol" data-q="Galatians 5:22, 23">Gal. 5:22, 23</a><span class="sep">&middot;</span><a class="wol" data-q="kr pp. 110-113">kr pp. 110-113</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What organizational developments fulfil Isaiah 60:17, and how does jw.org show the slave's faith and discretion?</p>
+        <p class="ans">Progressive improvements in oversight and arrangements fulfil the promise of "<strong>peace</strong>" as overseers and "righteousness" as taskmasters. And jw.org puts an ocean of accurate spiritual food in hundreds of languages at everyone's fingertips.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Isaiah 60:17">Isa. 60:17</a><span class="sep">&middot;</span><a class="wol" data-q="w14 1/15 p. 15">w14 1/15 p. 15, par. 12</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block life">
+    <div class="band">Personally Keeping Pace <span class="n">&middot; your part</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> The right <i>attitude</i> is the key. When an adjustment comes, humble hearts move ahead with the organization &mdash; they don't get left behind.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What do we learn from Israel and "the pillar of fire and cloud"?</p>
+        <p class="ans">When it moved, Israel moved &mdash; promptly and trustingly. We keep our eyes on Jehovah's guidance and <strong>follow without delay</strong>.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Exodus 14:24">Ex. 14:24</a><span class="sep">&middot;</span><a class="wol" data-q="w11 4/15 pp. 3-5">w11 4/15 pp. 3-5</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What attitude helps us keep walking in increasing light, even when a cherished custom is adjusted?</p>
+        <p class="ans">Humility and trust. One longtime elder said the key is "having the right attitude" &mdash; refusing a refinement means being left behind. Like Peter, we ask, "<strong>Where else would we go?</strong>"</p>
+        <div class="scrip"><a class="wol ref" data-q="John 6:68">John 6:68</a> &mdash; "Lord, whom shall we go away to? You have sayings of everlasting life."</div>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="w11 9/15 p. 14">w11 9/15 p. 14, pars. 14-15</a><span class="sep">&middot;</span><a class="wol" data-q="w21.05 pp. 5-6">w21.05 pp. 5-6</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How do we let our light shine &mdash; and why keep walking in it?</p>
+        <p class="ans">By sharing the truth we've received far and wide &mdash; "let your light shine before men." We keep walking because staying current with Jehovah's guidance keeps us close to him and useful in the ministry.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Matthew 5:14-16">Matt. 5:14-16</a><span class="sep">&middot;</span><a class="wol" data-q="Psalm 97:11">Ps. 97:11</a><span class="sep">&middot;</span><a class="wol" data-q="2 Peter 1:19-21">2 Pet. 1:19-21</a></p>
+        <div class="say"><b>Say it your way:</b> Name one recent "flash of light" (a refinement or new understanding) you've personally appreciated, and why.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Your quick prep plan &#9989;</h2>
+    <ul>
+      <li><b>3 comments ready:</b> the first-century pattern, a refinement you appreciate, and the right attitude toward change.</li>
+      <li><b>1 scripture to read aloud:</b> <a class="wol" data-q="Proverbs 4:18">Proverbs 4:18</a> or <a class="wol" data-q="John 6:68">John 6:68</a>.</li>
+      <li><b>Theme:</b> <a class="wol" data-q="Luke 12:12">Luke 12:12</a> &mdash; "the holy spirit will teach you."</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>

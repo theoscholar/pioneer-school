@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 16 (a) — The Joy of Jehovah Is Your Stronghold — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 16 (a)</p>
+    <h1>The Joy of Jehovah Is Your Stronghold</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14), Insight Vol. 2, and the New World Translation.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li><b>Heart of it</b> lines give the big idea before the questions.</li>
+      <li><b>Model answer = a starting point.</b> Say it your own way when you comment.</li>
+      <li><b>Blue links open the source</b> on the Watchtower Online Library; the book's cited references sit in the "&#128269; Look it up" line.</li>
+      <li>Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Opening Discussion <span class="n">&middot; joy that gives strength</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> The joy Jehovah gives is an <strong>unfailing stronghold</strong> &mdash; a source of strength for those walking in his way. It's not a bonus; it's fuel for our service.</p>
+      <p>In Ezra's day, when the people understood God's Law, they were told: "do not feel sad, for the joy of Jehovah is your stronghold." They applied what they learned, held a joyous festival, and gained strength for worship. We have every reason to be joyful too.</p>
+      <div class="scrip"><a class="wol ref" data-q="Nehemiah 8:10">Nehemiah 8:10</a> &mdash; "Do not feel sad, for the joy of Jehovah is your stronghold."</div>
+      <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Proverbs 2:6-8">Prov. 2:6-8</a><span class="sep">&middot;</span><a class="wol" data-q="Nehemiah 8:1-18">Neh. 8:1-18</a></p>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">"Nothing but Joyful" <span class="n">&middot; where joy comes from</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> True joy isn't a mood that comes and goes &mdash; it's a fruit of God's spirit, rooted in our relationship with him.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What is the source of true joy, and how is God's spirit involved?</p>
+        <p class="ans">Joy is a <strong>fruitage of the spirit</strong> &mdash; so it grows as we let God's spirit work in us. Our close relationship with Jehovah, and the blessed understanding of his Word, make us the most joyful people on earth.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Galatians 5:22">Gal. 5:22</a><span class="sep">&middot;</span><a class="wol" data-q="Proverbs 4:18">Prov. 4:18</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why can it be said that joy is not optional?</p>
+        <p class="ans">Because it's part of the <strong>fruitage of the spirit</strong> that God expects to see in us &mdash; "Always rejoice." Cultivating joy is part of faithful worship, not a nice extra.</p>
+        <div class="scrip"><a class="wol ref" data-q="Philippians 4:4">Philippians 4:4</a> &mdash; "Always rejoice in the Lord. Again I will say, Rejoice!"</div>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Romans 5:8, 18">Rom. 5:8, 18</a><span class="sep">&middot;</span><a class="wol" data-q="John 8:32">John 8:32</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">A Life of Purpose &amp; a Blessed Brotherhood <span class="n">&middot; joy shared</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Meaningful work and a worldwide family of friends are two of the greatest sources of joy in a pioneer's life.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why is our ministry a source of such joy?</p>
+        <p class="ans">It's the <strong>most important work on earth</strong> &mdash; and teaching others engraves the truths deeper on our own hearts. Our work brings joy to Jehovah, to the angels, and to those who hear. Jehovah <i>wants</i> us to enjoy our work.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Luke 15:10">Luke 15:10</a><span class="sep">&middot;</span><a class="wol" data-q="Acts 20:35">Acts 20:35</a><span class="sep">&middot;</span><a class="wol" data-q="Ecclesiastes 5:19">Eccl. 5:19</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How does our brotherhood bring joy &mdash; and how can we add to others' joy?</p>
+        <p class="ans">Our international family gives us "<strong>a hundredfold</strong>" of brothers and sisters &mdash; how good it is to dwell together in unity! And pioneers who encourage and stabilize others find that "<strong>the generous person will prosper</strong>."</p>
+        <div class="scrip"><a class="wol ref" data-q="Proverbs 11:25">Proverbs 11:25</a> &mdash; "The generous person will prosper, and whoever refreshes others will himself be refreshed."</div>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Psalm 133:1">Ps. 133:1</a><span class="sep">&middot;</span><a class="wol" data-q="Mark 10:29, 30">Mark 10:29, 30</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block life">
+    <div class="band">An Unfailing Stronghold <span class="n">&middot; joy through hard times</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Joy doesn't erase our problems &mdash; but it gives us the strength to endure them with a positive spirit.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why is a positive spirit important, since joy doesn't remove difficulties?</p>
+        <p class="ans">Like Jesus, who "for the joy that was set before him endured," a joyful outlook helps us <strong>bear up under trials</strong>. Being assured of Jehovah's love &mdash; he is "close to the brokenhearted" &mdash; steadies us.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Hebrews 12:2">Heb. 12:2</a><span class="sep">&middot;</span><a class="wol" data-q="James 1:2">Jas. 1:2</a><span class="sep">&middot;</span><a class="wol" data-q="Psalm 34:18">Ps. 34:18</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How is the joy of Jehovah an unfailing stronghold?</p>
+        <p class="ans">Knowing what Jehovah <strong>has done, is doing, and will do</strong> fills us with joy and gratitude &mdash; a strength that outlasts every hardship. "This is our God&hellip; let us be joyful and rejoice in the salvation by him."</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Isaiah 25:9">Isa. 25:9</a><span class="sep">&middot;</span><a class="wol" data-q="Colossians 1:9-11">Col. 1:9-11</a></p>
+        <div class="say"><b>Say it your way:</b> Name one thing about your service to Jehovah that brings you deep joy &mdash; and share why.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Your quick prep plan &#9989;</h2>
+    <ul>
+      <li><b>3 comments ready:</b> where true joy comes from, joy in the ministry and brotherhood, and joy as strength in trials.</li>
+      <li><b>1 scripture to read aloud:</b> <a class="wol" data-q="Nehemiah 8:10">Nehemiah 8:10</a> or <a class="wol" data-q="Philippians 4:4">Philippians 4:4</a>.</li>
+      <li><b>Reflect:</b> what fills <i>you</i> with the most joy in Jehovah's service?</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>

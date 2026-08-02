@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pioneer Service School &mdash; Study Guides</title>
+<style>
+  :root{--bg:#14161a;--ink:#e6e2d8;--card:#1e2128;--line:#343a44;--linehover:#55606e;
+    --d1:#4db3aa;--d2:#e0983f;--d3:#a884d6;--d4:#5cb56e;--d5:#5b9bd5;--d6:#d98b9e;
+    --bandtext:#14161a;--link:#7fb8e6;--linkhover:#263646;--scripture:#262a31;--scripborder:#6b5d3a;
+    --fs:19px;--lh:1.6;--ls:0.02em;--ws:0.03em;--font:'Segoe UI',Verdana,Tahoma,'Century Gothic',system-ui,sans-serif;}
+  body.light{--bg:#faf3e3;--ink:#2b2b33;--card:#fffaf0;--line:#e4d9bf;--linehover:#c9b98f;
+    --d1:#2e6f6a;--d2:#b5651d;--d3:#6a4c93;--d4:#2f6d3c;--d5:#2f5f8f;--d6:#a05064;
+    --bandtext:#fff;--link:#1c5b8c;--linkhover:#dcebf7;--scripture:#f3ecd8;--scripborder:#cdbf98;}
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--fs);line-height:var(--lh);
+    letter-spacing:var(--ls);word-spacing:var(--ws);margin:0;padding:0 16px 80px;}
+  .wrap{max-width:860px;margin:0 auto;}
+  .controls{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:2px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 0;margin-bottom:8px;}
+  .controls button{font-family:var(--font);font-size:15px;cursor:pointer;border:2px solid var(--line);
+    background:var(--card);color:var(--ink);border-radius:10px;padding:7px 12px;letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px;opacity:.7;margin-left:auto;letter-spacing:0;}
+  header.doc{padding:26px 0 8px;}
+  .kicker{font-size:15px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin:0;}
+  h1{font-size:1.9em;line-height:1.2;margin:.15em 0 .3em;letter-spacing:0;}
+  .sub{font-size:.95em;opacity:.78;margin:0;}
+  .scrip{background:var(--scripture);border-left:5px solid var(--scripborder);border-radius:8px;
+    padding:10px 14px;margin:16px 0 6px;font-size:.95em;}
+  .day{margin:26px 0 8px;}
+  .dayband{border-radius:12px 12px 0 0;padding:11px 18px;color:var(--bandtext);display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;}
+  .dayband .dnum{font-size:1.2em;font-weight:800;letter-spacing:0;}
+  .dayband .dsub{font-size:.82em;font-weight:600;opacity:.9;}
+  .daybody{background:var(--card);border:2px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:6px 10px 10px;}
+  .d1 .dayband{background:var(--d1);} .d1 .daybody{border-color:var(--d1);}
+  .d2 .dayband{background:var(--d2);} .d2 .daybody{border-color:var(--d2);}
+  .d3 .dayband{background:var(--d3);} .d3 .daybody{border-color:var(--d3);}
+  .d4 .dayband{background:var(--d4);} .d4 .daybody{border-color:var(--d4);}
+  .d5 .dayband{background:var(--d5);} .d5 .daybody{border-color:var(--d5);}
+  .d6 .dayband{background:var(--d6);} .d6 .daybody{border-color:var(--d6);}
+  a.unit{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);padding:11px 12px;
+    border-radius:9px;border-bottom:1px solid var(--line);}
+  a.unit:last-child{border-bottom:none;} a.unit:hover{background:var(--linkhover);}
+  .ulabel{flex:0 0 auto;min-width:82px;font-weight:800;color:var(--link);letter-spacing:0;}
+  .utitle{flex:1 1 auto;font-size:.97em;}
+  .arrow{flex:0 0 auto;font-size:1.4em;opacity:.5;}
+  .tagchip{display:inline-block;font-size:.7em;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:1px 7px;border-radius:20px;margin-left:8px;vertical-align:middle;border:1px solid var(--line);opacity:.85;}
+  .footer{opacity:.6;font-size:.82em;margin:30px 0 10px;text-align:center;letter-spacing:0;}
+  body.dys{--ls:.06em;--ws:.16em;--lh:1.9;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap any unit to open its study notes</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School</p>
+    <h1>Study Guides &mdash; All 35 Units</h1>
+    <p class="sub">Based on "Fully Accomplish Your Ministry" (pt14). Grouped by day of the school. Tap a unit to open its notes.</p>
+    <div class="scrip">&ldquo;Do the work of an evangelizer, fully accomplish your ministry.&rdquo; &mdash; 2 Timothy 4:5</div>
+  </header>
+<section class="day d1">
+  <div class="dayband"><span class="dnum">Day 1</span><span class="dsub">Getting started &middot; your bond with Jehovah &amp; using the Bible</span></div>
+  <div class="daybody">
+    <a class="unit" href="unit-1a-explanation-of-the-pioneer-service-school-course.html"><span class="ulabel">Unit 1 (a)</span><span class="utitle">Explanation of the Pioneer Service School Course</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-1b-fortify-your-relationship-with-jehovah.html"><span class="ulabel">Unit 1 (b)</span><span class="utitle">Fortify Your Relationship With Jehovah</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-2a-using-the-new-world-translation-part-1.html"><span class="ulabel">Unit 2 (a)</span><span class="utitle">Using the New World Translation &mdash; Part 1</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-2b-using-the-new-world-translation-part-2.html"><span class="ulabel">Unit 2 (b)</span><span class="utitle">Using the New World Translation &mdash; Part 2</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-3a-keep-pace-with-spiritual-enlightenment.html"><span class="ulabel">Unit 3 (a)</span><span class="utitle">Keep Pace With Spiritual Enlightenment</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-3b-review-day-1.html"><span class="ulabel">Unit 3 (b)</span><span class="utitle">Review &mdash; Day 1<span class="tagchip">Review</span></span><span class="arrow">&rsaquo;</span></a>
+  </div>
+</section>
+<section class="day d2">
+  <div class="dayband"><span class="dnum">Day 2</span><span class="dsub">Upholding Jehovah's rule &amp; preaching house to house</span></div>
+  <div class="daybody">
+    <a class="unit" href="unit-4a-sovereignty-and-the-sanctification-of-jehovah-s-name.html"><span class="ulabel">Unit 4 (a)</span><span class="utitle">Sovereignty and the Sanctification of Jehovah's Name</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-4b-show-personal-interest-in-others.html"><span class="ulabel">Unit 4 (b)</span><span class="utitle">Show Personal Interest in Others</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-5a-from-house-to-house-our-principal-way-of-preaching.html"><span class="ulabel">Unit 5 (a)</span><span class="utitle">From House to House &mdash; Our Principal Way of Preaching</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-5b-workshop-1-from-house-to-house.html"><span class="ulabel">Unit 5 (b)</span><span class="utitle">Workshop 1 &mdash; From House to House<span class="tagchip">Workshop</span></span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-6a-women-who-make-jehovah-s-heart-rejoice.html"><span class="ulabel">Unit 6 (a)</span><span class="utitle">Women Who Make Jehovah's Heart Rejoice</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-6b-review-day-2.html"><span class="ulabel">Unit 6 (b)</span><span class="utitle">Review &mdash; Day 2<span class="tagchip">Review</span></span><span class="arrow">&rsaquo;</span></a>
+  </div>
+</section>
+<section class="day d3">
+  <div class="dayband"><span class="dnum">Day 3</span><span class="dsub">Counsel, integrity &amp; every form of the ministry</span></div>
+  <div class="daybody">
+    <a class="unit" href="unit-7a-benefit-from-counsel-and-direction.html"><span class="ulabel">Unit 7 (a)</span><span class="utitle">Benefit From Counsel and Direction</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-7b-resist-the-spirit-of-the-world.html"><span class="ulabel">Unit 7 (b)</span><span class="utitle">Resist &ldquo;the Spirit of the World&rdquo;</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-8a-walk-in-the-way-of-integrity.html"><span class="ulabel">Unit 8 (a)</span><span class="utitle">Walk in the Way of Integrity</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-8b-participate-in-various-forms-of-our-ministry.html"><span class="ulabel">Unit 8 (b)</span><span class="utitle">Participate in Various Forms of Our Ministry</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-9a-workshop-2-various-forms-of-our-ministry.html"><span class="ulabel">Unit 9 (a)</span><span class="utitle">Workshop 2 &mdash; Various Forms of Our Ministry<span class="tagchip">Workshop</span></span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-9b-review-day-3.html"><span class="ulabel">Unit 9 (b)</span><span class="utitle">Review &mdash; Day 3<span class="tagchip">Review</span></span><span class="arrow">&rsaquo;</span></a>
+  </div>
+</section>
+<section class="day d4">
+  <div class="dayband"><span class="dnum">Day 4</span><span class="dsub">Jesus' role, Bible principles &amp; return visits</span></div>
+  <div class="daybody">
+    <a class="unit" href="unit-10a-appreciate-jesus-role.html"><span class="ulabel">Unit 10 (a)</span><span class="utitle">Appreciate Jesus' Role</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-10b-think-in-terms-of-bible-principles.html"><span class="ulabel">Unit 10 (b)</span><span class="utitle">Think in Terms of Bible Principles</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-11a-examine-your-spiritual-progress.html"><span class="ulabel">Unit 11 (a)</span><span class="utitle">Examine Your Spiritual Progress</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-11b-make-effective-return-visits.html"><span class="ulabel">Unit 11 (b)</span><span class="utitle">Make Effective Return Visits</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-12a-workshop-3-make-effective-return-visits.html"><span class="ulabel">Unit 12 (a)</span><span class="utitle">Workshop 3 &mdash; Make Effective Return Visits<span class="tagchip">Workshop</span></span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-12b-review-day-4.html"><span class="ulabel">Unit 12 (b)</span><span class="utitle">Review &mdash; Day 4<span class="tagchip">Review</span></span><span class="arrow">&rsaquo;</span></a>
+  </div>
+</section>
+<section class="day d5">
+  <div class="dayband"><span class="dnum">Day 5</span><span class="dsub">Teaching like the Master &amp; conducting Bible studies</span></div>
+  <div class="daybody">
+    <a class="unit" href="unit-13a-learn-from-the-master.html"><span class="ulabel">Unit 13 (a)</span><span class="utitle">Learn From the Master</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-13b-conduct-progressive-bible-studies-part-1.html"><span class="ulabel">Unit 13 (b)</span><span class="utitle">Conduct Progressive Bible Studies &mdash; Part 1</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-14a-conduct-progressive-bible-studies-part-2.html"><span class="ulabel">Unit 14 (a)</span><span class="utitle">Conduct Progressive Bible Studies &mdash; Part 2</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-14b-workshop-4-conduct-progressive-bible-studies.html"><span class="ulabel">Unit 14 (b)</span><span class="utitle">Workshop 4 &mdash; Conduct Progressive Bible Studies<span class="tagchip">Workshop</span></span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-15a-help-others-press-on-to-maturity.html"><span class="ulabel">Unit 15 (a)</span><span class="utitle">Help Others “Press On to Maturity”</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-15b-review-day-5.html"><span class="ulabel">Unit 15 (b)</span><span class="utitle">Review &mdash; Day 5<span class="tagchip">Review</span></span><span class="arrow">&rsaquo;</span></a>
+  </div>
+</section>
+<section class="day d6">
+  <div class="dayband"><span class="dnum">Day 6</span><span class="dsub">Joy, trust, prayer, endurance &mdash; and the conclusion</span></div>
+  <div class="daybody">
+    <a class="unit" href="unit-16a-the-joy-of-jehovah-is-your-stronghold.html"><span class="ulabel">Unit 16 (a)</span><span class="utitle">The Joy of Jehovah Is Your Stronghold</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-16b-jehovah-blesses-those-trusting-in-him.html"><span class="ulabel">Unit 16 (b)</span><span class="utitle">Jehovah Blesses Those Trusting In Him</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-17a-persevere-in-prayer.html"><span class="ulabel">Unit 17 (a)</span><span class="utitle">Persevere in Prayer</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-17b-endurance-leads-to-an-approved-condition.html"><span class="ulabel">Unit 17 (b)</span><span class="utitle">Endurance Leads to an Approved Condition</span><span class="arrow">&rsaquo;</span></a>
+    <a class="unit" href="unit-18-students-comments-and-concluding-lectures.html"><span class="ulabel">Unit 18</span><span class="utitle">Students' Comments and Concluding Lectures<span class="tagchip">Finale</span></span><span class="arrow">&rsaquo;</span></a>
+  </div>
+</section>
+  <p class="footer">35 study guides &middot; one per unit &middot; bookmark this page as your home base.</p>
+</div>
+<script>
+  var step=0;
+  function fs(d){ step=Math.max(-3,Math.min(6,step+d));
+    document.documentElement.style.setProperty('--fs',(19+step*1.5)+'px'); }
+</script>
+</body>
+</html>

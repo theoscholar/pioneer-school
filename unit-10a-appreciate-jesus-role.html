@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 (a) — Appreciate Jesus' Role — Study Notes</title>
+<style>
+  :root{
+    /* ---- DARK THEME (default) ---- */
+    --bg:#14161a;            /* soft near-black, not pure black */
+    --ink:#e6e2d8;           /* warm off-white text, low glare */
+    --card:#1e2128;
+    --line:#343a44;
+    --linehover:#55606e;
+    --person:#4db3aa;        /* teal */
+    --way:#e0983f;           /* amber */
+    --truth:#a884d6;         /* purple */
+    --life:#5cb56e;          /* green */
+    --bandtext:#14161a;      /* dark text sits on the bright bands */
+    --scripture:#262a31;
+    --scripborder:#6b5d3a;
+    --hibg:#3b3418;          /* highlight behind key words */
+    --hitext:#ffe08a;
+    --lookupbg:#22262e;
+    --sayblue:#1c2733;
+    --sayborder:#3a5a7a;
+    --sayb:#8fc0ef;
+    --prepbg:#17251a;
+    --prepborder:#2f5236;
+    --link:#7fb8e6;
+    --linkhover:#263646;
+    --fs:19px;
+    --lh:1.7;
+    --ls:0.02em;
+    --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  /* ---- LIGHT THEME (toggle) ---- */
+  body.light{
+    --bg:#faf3e3;
+    --ink:#2b2b33;
+    --card:#fffaf0;
+    --line:#e4d9bf;
+    --linehover:#c9b98f;
+    --person:#2e6f6a;
+    --way:#b5651d;
+    --truth:#6a4c93;
+    --life:#2f6d3c;
+    --bandtext:#ffffff;
+    --scripture:#f3ecd8;
+    --scripborder:#cdbf98;
+    --hibg:#fff4cf;
+    --hitext:#2b2b33;
+    --lookupbg:#f7f1e0;
+    --sayblue:#eef4fb;
+    --sayborder:#9cc0e6;
+    --sayb:#2b5a86;
+    --prepbg:#eef7ee;
+    --prepborder:#b8dcb8;
+    --link:#1c5b8c;
+    --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh);
+    letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;
+  }
+  .wrap{max-width:820px; margin:0 auto;}
+
+  /* ---- control bar ---- */
+  .controls{
+    position:sticky; top:0; z-index:10;
+    background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+    padding:10px 0; margin-bottom:8px;
+  }
+  .controls button{
+    font-family:var(--font); font-size:15px; cursor:pointer;
+    border:2px solid var(--line); background:var(--card); color:var(--ink);
+    border-radius:10px; padding:7px 12px; letter-spacing:0;
+  }
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+
+  /* ---- header ---- */
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+
+  /* ---- links / references ---- */
+  a.wol{
+    color:var(--link); text-decoration:underline; text-underline-offset:2px;
+    cursor:pointer; letter-spacing:0; word-spacing:normal; white-space:nowrap;
+  }
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+
+  /* ---- how to use ---- */
+  .howto{
+    background:var(--card); border:2px solid var(--line);
+    border-radius:14px; padding:16px 20px; margin:22px 0;
+  }
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;}
+  .howto li{margin:.35em 0;}
+
+  /* ---- section blocks ---- */
+  section.block{margin:34px 0 10px;}
+  .band{
+    color:var(--bandtext); border-radius:12px 12px 0 0;
+    padding:12px 18px; font-size:1.25em; font-weight:700; letter-spacing:0;
+    display:flex; align-items:baseline; gap:10px;
+  }
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{
+    background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;
+  }
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);}       .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);}   .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);}     .life .body{border-color:var(--life);}
+
+  /* ---- question item ---- */
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{
+    display:inline-block; min-width:1.6em; margin-right:.3em;
+    color:var(--way); font-weight:800;
+  }
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+
+  /* ---- lookup row ---- */
+  .lookup{
+    font-size:.85em; margin:.5em 0 .2em; opacity:.95;
+    background:var(--lookupbg); border-radius:8px; padding:6px 10px;
+  }
+  .lookup .mag{opacity:.7; margin-right:4px;}
+  .lookup .sep{opacity:.4; padding:0 5px;}
+
+  /* ---- scripture box ---- */
+  .scrip{
+    background:var(--scripture); border-left:5px solid var(--scripborder);
+    border-radius:8px; padding:10px 14px; margin:.6em 0;
+    font-size:.96em;
+  }
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+
+  /* ---- say it your way ---- */
+  .say{
+    background:var(--sayblue); border:2px dashed var(--sayborder);
+    border-radius:10px; padding:10px 14px; margin:.7em 0 .2em;
+    font-size:.95em;
+  }
+  .say b{color:var(--sayb);}
+
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;}
+  .titles li{margin:.3em 0;}
+
+  .prep{
+    background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px;
+    padding:16px 20px; margin:30px 0;
+  }
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+
+  /* dyslexia spacing mode */
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+
+  /* collapsible How-to */
+  details.howto{padding:0;}
+  details.howto>summary{cursor:pointer; list-style:none; padding:11px 18px; font-size:1.02em;
+    font-weight:700; letter-spacing:0; user-select:none; display:flex; align-items:center; gap:9px;}
+  details.howto>summary::-webkit-details-marker{display:none;}
+  details.howto>summary::before{content:"\25B6"; font-size:.75em; opacity:.65; transition:transform .15s;}
+  details.howto[open]>summary::before{transform:rotate(90deg);}
+  details.howto>summary:hover{color:var(--sayb);}
+  details.howto ul{margin:.1em 0 2px; padding:0 20px 14px 2.5em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A− smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">☀ Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+
+  <header class="doc">
+    <p class="kicker">Pioneer Service School · Unit 10 (a)</p>
+    <h1>Appreciate Jesus' Role</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14), Insight Vol. 2, and the New World Translation.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes 💡</summary>
+    <ul>
+      <li><b>The big picture first.</b> Read the "Heart of it" line at the top of each section before the questions.</li>
+      <li><b>Model answer = a starting point.</b> The plain-language answer shows you the idea. You don't have to say it that way.</li>
+      <li><b>Make it yours.</b> Each "Say it your way" box is a spot to add a comment in your own words. That's what you'll raise in class.</li>
+      <li><b>Blue links open the source.</b> Tap any blue reference (like <a class="wol" data-q="John 14:6">John 14:6</a>) and it pops open on the Watchtower Online Library — scriptures and Insight pages both. The book's own cited references sit in the "🔎 Look it up" line under each question.</li>
+      <li>Use the buttons up top to grow the text, add spacing, or switch to light mode — whatever reads easiest for you.</li>
+    </ul>
+  </details>
+
+  <!-- OPENING DISCUSSION -->
+  <section class="block person">
+    <div class="band">Opening Discussion <span class="n">· why this matters</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Knowing Jesus' role isn't just head knowledge. It's the door to our friendship with Jehovah — and it fuels how we help others in the ministry.</p>
+      <p>Jesus told his apostles they would "be witnesses" of him "to the most distant part of the earth." When you talk to people about God's promises, you are doing exactly that. So why care so much about God's firstborn Son? Because Jesus said <strong>no one comes to the Father except through him</strong>. Understanding his role grows our appreciation for God's whole purpose — and moves us to help sincere people of every background get to know him.</p>
+      <div class="scrip"><a class="wol ref" data-q="Acts 1:8">Acts 1:8</a> — "But you will receive power when the holy spirit comes upon you, and you will be witnesses of me in Jerusalem, in all Judea and Samaria, and to the most distant part of the earth."</div>
+      <div class="scrip"><a class="wol ref" data-q="John 14:6">John 14:6</a> — "I am the way and the truth and the life. No one comes to the Father except through me."</div>
+      <p class="sub">The four sections below unpack that one verse: Jesus as <b>The Person</b>, then <b>The Way</b>, <b>The Truth</b>, and <b>The Life</b>.</p>
+    </div>
+  </section>
+
+  <!-- THE PERSON -->
+  <section class="block person">
+    <div class="band">The Person <span class="n">· who Jesus is</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jesus is God's very first creation — his firstborn, only-begotten Son — used by Jehovah to make everything else. Great, but <b>not</b> equal to God.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How do we know Jesus is God's "firstborn" Son?</p>
+        <p class="ans">The Bible calls him "the <strong>firstborn</strong> of all creation," meaning he was Jehovah's first and direct creation — created before everything else. Jesus himself pointed to God as the source of his life: "I live because of the Father" (<a class="wol" data-q="John 6:57">John 6:57</a>). So Jehovah was truly his Father and Life-Giver.</p>
+        <div class="scrip"><a class="wol ref" data-q="Colossians 1:15">Colossians 1:15</a> — "He is the image of the invisible God, the firstborn of all creation."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Colossians 1:15">Col. 1:15</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why is Jesus also called God's "only-begotten" Son?</p>
+        <p class="ans">Because he is the only one Jehovah created <b>directly, by himself</b>. Every other thing — angels, stars, humans — was made <b>through</b> Jesus. That direct, one-of-a-kind origin makes him "only-begotten."</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="John 1:3, 14">John 1:3, 14</a><span class="sep">·</span><a class="wol" data-q="Hebrews 11:17">Heb. 11:17</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 53">it-2 p. 53, par. 2</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What was Jesus' role in creation (Colossians 1:16)? Why is this <b>not</b> "co-Creator"?</p>
+        <p class="ans">Jesus was the <strong>skilled worker Jehovah used</strong> to create all other things — the agent, not the source. A helper who builds a house from the owner's plans is not a "co-owner." Insight puts it simply: God's wisdom was expressed in creation, <b>but through his Son</b>. Jehovah is the Creator; Jesus is the one he worked through.</p>
+        <div class="scrip"><a class="wol ref" data-q="Colossians 1:16">Colossians 1:16</a> — "By means of him all other things were created in the heavens and on the earth, the things visible and the things invisible."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Matthew 19:4-6">Matt. 19:4-6</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 52">it-2 p. 52</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>In what sense is Jesus "wisdom personified" (Proverbs 8)?</p>
+        <p class="ans">Proverbs pictures wisdom as a person working "beside" Jehovah as a "<strong>master worker</strong>." That fits God's firstborn Son. Wisdom only shows up when it's put to work — and Jehovah's wisdom was put to work in creation through Jesus.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Proverbs 8:12, 30">Prov. 8:12, 30</a><span class="sep">·</span><a class="wol" data-q="1 Corinthians 1:24">1 Cor. 1:24</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 52">it-2 p. 52</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>In what way is Jesus "the Word" (John 1:1)?</p>
+        <p class="ans">"The Word" is a job title: he is God's <strong>Spokesman</strong> — the one who speaks and acts for Jehovah. He still carries the name "The Word of God" today in heaven. We can imitate his humility by happily filling the role Jehovah gives us, without needing the spotlight.</p>
+        <div class="scrip"><a class="wol ref" data-q="John 1:1">John 1:1</a> — "In the beginning was the Word, and the Word was with God, and the Word was a god."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="John 1:1, 14">John 1:1, 14</a><span class="sep">·</span><a class="wol" data-q="John 12:50">John 12:50</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 53">it-2 p. 53, pars. 3-5</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How would you help someone understand Jesus' prehuman existence — and why does it matter to <b>you</b>?</p>
+        <p class="ans">Jesus lived as a mighty spirit person for ages before coming to earth (John's Gospel and Micah 5:2 point to this). Personally, it deepens my awe: Jehovah handed his dearest, most experienced Son to rescue <b>us</b>. That's how much we're loved.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="John 8:23, 42, 58">John 8:23, 42, 58</a><span class="sep">·</span><a class="wol" data-q="Micah 5:2">Micah 5:2</a></p>
+        <div class="say"><b>Say it your way:</b> Which fact about "who Jesus is" hits you hardest — firstborn, master worker, or Spokesman? Write one line on why.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE WAY -->
+  <section class="block way">
+    <div class="band">"The Way" <span class="n">· our road back to God</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Sinful humans can't reach Jehovah on their own. Jesus is the one and only bridge back — for friendship, forgiveness, and prayer.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What is the only way for sinful humans to be reconciled to God?</p>
+        <p class="ans">Through Jesus' ransom. Insight says it plainly: "Jesus Christ is the <strong>one and only 'way'</strong> of reconciliation with God." His sacrifice repairs the gap that sin opened up.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Romans 5:11">Rom. 5:11</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 760">it-2 pp. 760-762</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How does Jesus make a good standing with Jehovah possible?</p>
+        <p class="ans">He is the <strong>mediator</strong> — the go-between. He gave his perfect life as "a corresponding ransom," so imperfect people can be counted righteous and approach God.</p>
+        <div class="scrip"><a class="wol ref" data-q="1 Timothy 2:5, 6">1 Timothy 2:5, 6</a> — "For there is one God, and one mediator between God and men, a man, Christ Jesus, who gave himself a corresponding ransom for all."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Romans 5:18">Rom. 5:18</a><span class="sep">·</span><a class="wol" data-q="1 Timothy 2:5">1 Tim. 2:5</a><span class="sep">·</span><a class="wol" data-q="Hebrews 9:22-26">Heb. 9:22-26</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Who can benefit — and what's the final outcome?</p>
+        <p class="ans">People of <b>every nation</b>. When Christ died, the wall between Jew and Gentile came down. Peter learned "God is not partial." Those who accept this provision can be "completely saved," with everlasting life ahead.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Acts 10:43">Acts 10:43</a><span class="sep">·</span><a class="wol" data-q="Ephesians 2:18">Eph. 2:18</a><span class="sep">·</span><a class="wol" data-q="1 John 2:2">1 John 2:2</a><span class="sep">·</span><a class="wol" data-q="Hebrews 7:25">Heb. 7:25</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How is Jesus "the way" in prayer, and in the example he set?</p>
+        <p class="ans">We pray <b>to Jehovah, through Jesus</b> — Jesus opened that channel. And his flawless life gives us a model to "follow his steps closely." Accepting his role means both praying in his name and copying his example.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="John 16:23, 24">John 16:23, 24</a><span class="sep">·</span><a class="wol" data-q="1 Peter 2:21">1 Pet. 2:21</a></p>
+        <div class="say"><b>Say it your way:</b> Finish this sentence for a comment: "Jesus being 'the way' means that when I pray, I…"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TRUTH -->
+  <section class="block truth">
+    <div class="band">"The Truth" <span class="n">· God's promises made real</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jesus didn't just <i>teach</i> truth — his whole life <b>turned God's promises into reality</b>. He is the living proof that Jehovah keeps his word.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How did Jesus "bear witness to the truth" by his entire life course?</p>
+        <p class="ans">Everything he did — his birth, baptism, three-and-a-half-year ministry, faithful death, and resurrection — <strong>proved God's promises true</strong>. Insight says "the truth came to be through Jesus": God's truth "came to realization" in him. He was the real Messiah, not a shadow.</p>
+        <div class="scrip"><a class="wol ref" data-q="John 1:17">John 1:17</a> — "The undeserved kindness and the truth came to be through Jesus Christ."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="John 18:37">John 18:37</a><span class="sep">·</span><a class="wol" data-q="Luke 24:44">Luke 24:44</a><span class="sep">·</span><a class="wol" data-q="John 1:17">John 1:17</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 60">it-2 p. 60, par. 2</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 62">p. 62, pars. 1-5</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 692">p. 692, par. 2</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How is Jesus a key part of these prophecies?</p>
+        <p class="ans">He is the thread that ties them together:</p>
+        <div class="scrip"><a class="wol ref" data-q="Genesis 3:15">Genesis 3:15</a> — He is the promised "seed" who crushes the serpent (Satan).</div>
+        <div class="scrip"><a class="wol ref" data-q="Genesis 22:16-18">Genesis 22:16-18</a> — He is the offspring of Abraham through whom all nations are blessed.</div>
+        <div class="scrip"><a class="wol ref" data-q="Daniel 7:13, 14">Daniel 7:13, 14</a> — He is the "son of man" given rulership, honor, and an everlasting Kingdom.</div>
+        <p class="ans">As Revelation 19:10 says, "the witness concerning Jesus is what inspires prophecy" — he's the point they all aim at.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Revelation 19:10">Rev. 19:10</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 60">it-2 p. 60</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What shows Jesus never held back from speaking the truth — and how can you imitate his zeal?</p>
+        <p class="ans">He preached "from city to city and village to village," never softening the message to please people. I imitate his zeal by <b>speaking up kindly but clearly</b>, even when it's easier to stay quiet.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Luke 8:1">Luke 8:1</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How does the witness concerning Jesus inspire prophecy?</p>
+        <p class="ans">Jesus is the heart of Bible prophecy — "the witness concerning Jesus is what inspires prophecy." So the whole "work of witnessing concerning Jesus" is a sacred, prophetic privilege, not a small thing.</p>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Revelation 19:10">Rev. 19:10</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 691">it-2 p. 691, par. 4</a></p>
+        <div class="say"><b>Say it your way:</b> Name one setting (work, school, a friend) where you want Jesus-like courage to share truth. That's your comment.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE LIFE -->
+  <section class="block life">
+    <div class="band">"The Life" <span class="n">· the gift of living forever</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jesus came to <b>give life back</b> to the human family. His ransom is the price that buys us out of sin and death.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>For what reason did Jesus come to earth?</p>
+        <p class="ans">Not to be served, but to <strong>give his life as a ransom</strong> for many. That was the mission.</p>
+        <div class="scrip"><a class="wol ref" data-q="Matthew 20:28">Matthew 20:28</a> — "…just as the Son of man came, not to be ministered to, but to minister and to give his life as a ransom in exchange for many."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Matthew 20:28">Matt. 20:28</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What is the ransom price Jesus paid?</p>
+        <p class="ans">His own perfect human life — his "<strong>precious blood</strong>," like that of a spotless lamb. A perfect life was the exact match needed to buy back what Adam lost.</p>
+        <div class="scrip"><a class="wol ref" data-q="1 Peter 1:18, 19">1 Peter 1:18, 19</a> — "…with precious blood, like that of an unblemished and spotless lamb, that of Christ."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="1 Peter 1:18, 19">1 Pet. 1:18, 19</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What does "Chief Agent of life" mean (Acts 3:15)?</p>
+        <p class="ans">The Greek means "<strong>chief leader</strong>" or "pioneer of Life." Jesus opens the road to eternal life and administers its blessings — as High Priest who cleanses us from sin and as the appointed Judge. He leads the way to life, then hands out its benefits.</p>
+        <div class="scrip"><a class="wol ref" data-q="Acts 3:15">Acts 3:15</a> — "…the Chief Agent of life. But God raised him up from the dead, of which fact we are witnesses."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Acts 3:15">Acts 3:15</a><span class="sep">·</span><a class="wol" data-q="Acts 10:42">Acts 10:42</a><span class="sep">·</span><a class="wol" data-q="John 6:39, 40">John 6:39, 40</a><span class="sep">·</span><a class="wol" data-q="Ephesians 1:7">Eph. 1:7</a><span class="sep">·</span><a class="wol" data-q="Hebrews 8:1-3">Heb. 8:1-3</a><span class="sep">·</span><a class="wol" data-q="it-2 p. 61">it-2 p. 61, pars. 1-3</a></p>
+      </div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How are we already benefiting from Jesus' sacrifice — and if you want everlasting life, in whom must you have faith?</p>
+        <p class="ans">Even now a great crowd enjoys a clean standing and peace with God because of the ransom. And the door to eternal life has one key: faith in Jesus. "There is <strong>no other name</strong>" by which we can be saved. Understanding him as "the life" makes my ministry feel urgent — I'm offering people the one name that saves.</p>
+        <div class="scrip"><a class="wol ref" data-q="Acts 4:12">Acts 4:12</a> — "There is no salvation in anyone else, for there is no other name under heaven… by which we must get saved."</div>
+        <p class="lookup"><span class="mag">🔎</span>Look it up: <a class="wol" data-q="Revelation 7:9, 10">Rev. 7:9, 10</a><span class="sep">·</span><a class="wol" data-q="Acts 4:10, 12">Acts 4:10, 12</a></p>
+        <div class="say"><b>Say it your way:</b> How does knowing Jesus is "the life" change the way you'll talk to people this week? One sentence.</div>
+      </div>
+
+      <div class="titles">
+        <h3>Bonus: other Bible titles for Jesus</h3>
+        <ul>
+          <li>"The Amen" — <a class="wol" data-q="Revelation 3:14">Revelation 3:14</a></li>
+          <li>"Eternal Father" — <a class="wol" data-q="Isaiah 9:6">Isaiah 9:6</a></li>
+          <li>"High Priest" — <a class="wol" data-q="Hebrews 3:1">Hebrews 3:1</a></li>
+          <li>"King of kings" — <a class="wol" data-q="Revelation 17:14">Revelation 17:14</a></li>
+          <li>"Prince of Peace" — <a class="wol" data-q="Isaiah 9:6">Isaiah 9:6</a></li>
+          <li>"Wonderful Counselor" — <a class="wol" data-q="Isaiah 9:6">Isaiah 9:6</a>; <a class="wol" data-q="John 6:68">John 6:68</a></li>
+        </ul>
+        <p class="sub">Pick one that speaks to you — a great, short comment is simply: "This title shows me Jesus is my ___, because…"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREP BOX -->
+  <div class="prep">
+    <h2>Your quick prep plan ✅</h2>
+    <ul>
+      <li><b>3 comments ready:</b> pick your favourite "Say it your way" answer from three different sections and star them.</li>
+      <li><b>1 scripture to read aloud:</b> choose one verse you'd be happy to read if called on (<a class="wol" data-q="John 14:6">John 14:6</a> is a strong one).</li>
+      <li><b>1 personal "why":</b> be ready to say why appreciating Jesus' role makes <i>you</i> a better witness.</li>
+      <li>Read the four "Heart of it" lines one more time right before class — that's the whole unit in four sentences.</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study · Sources: pt14 Unit 10 (a); Insight on the Scriptures Vol. 2 ("Jesus Christ," "Prayer"); New World Translation (2013). Blue links open on wol.jw.org.</p>
+
+</div>
+
+<script>
+  var step = 0;
+  function fs(dir){
+    step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px');
+  }
+  // Wire every reference link to open the Watchtower Online Library in a popup window.
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var w = window.open(a.href, 'wolPopup',
+        'width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href, '_blank'); } // fallback if popups blocked
+    });
+  });
+</script>
+</body>
+</html>

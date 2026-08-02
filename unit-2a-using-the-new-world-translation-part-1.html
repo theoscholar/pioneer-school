@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 (a) — Using the New World Translation, Part 1 — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+
+  /* collapsible How-to */
+  details.howto{padding:0;}
+  details.howto>summary{cursor:pointer; list-style:none; padding:11px 18px; font-size:1.02em;
+    font-weight:700; letter-spacing:0; user-select:none; display:flex; align-items:center; gap:9px;}
+  details.howto>summary::-webkit-details-marker{display:none;}
+  details.howto>summary::before{content:"\25B6"; font-size:.75em; opacity:.65; transition:transform .15s;}
+  details.howto[open]>summary::before{transform:rotate(90deg);}
+  details.howto>summary:hover{color:var(--sayb);}
+  details.howto ul{margin:.1em 0 2px; padding:0 20px 14px 2.5em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 2 (a)</p>
+    <h1>Using the New World Translation &mdash; Part 1</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14) and the New World Translation appendixes.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li>This unit is about <b>why the New World Translation is trustworthy</b> &mdash; great background for defending it in the ministry.</li>
+      <li><b>Blue links open the source.</b> Most answers point to the appendix pages in the back of the revised Bible (nwt), which you can tap to read.</li>
+      <li>Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Superiority of the Translation <span class="n">&middot; why we trust it</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> The New World Translation is accurate, clear, and honest &mdash; it puts God's name back where it belongs and uses the best available manuscripts.</p>
+      <div class="scrip"><a class="wol ref" data-q="2 Timothy 2:15">2 Timothy 2:15</a> &mdash; a workman "handling the word of the truth aright."</div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why was there a need for a new translation?</p>
+        <p class="ans">Older translations often used <strong>archaic language</strong>, reflected doctrinal bias, and hid God's name. A fresh, accurate translation was needed to help honest-hearted people understand the truth.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="w15 12/15 p. 8">w15 12/15 p. 8, pars. 16-17</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How long did it take to complete, and how have people responded?</p>
+        <p class="ans">The complete New World Translation took about <strong>12 years</strong> of careful work (released in parts 1950&ndash;1960). Around the world, people are deeply moved to read the Bible clearly in their own language.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="kr p. 39">kr p. 39, par. 1</a><span class="sep">&middot;</span><a class="wol" data-q="kr p. 84">kr p. 84, par. 16</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why especially is it superior to other translations?</p>
+        <p class="ans">It <strong>restores God's name, Jehovah</strong>, thousands of times, translates accurately from the best texts, and stays faithful to the original meaning rather than to tradition.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="kr p. 39">kr p. 39, par. 2</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why a revised edition &mdash; and what was the committee's goal?</p>
+        <p class="ans">Language changes over time. The 2013 revision aimed for <strong>modern, easy-to-understand wording</strong> that stays accurate &mdash; making it even easier to read and share.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt p. 39">nwt p. 39</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">How We Got the Bible <span class="n">&middot; Appendix A1&ndash;A3</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> A good translation carries the original <i>meaning</i>, not just word-for-word swaps &mdash; and the text itself has been preserved with remarkable accuracy.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why isn't a strict word-for-word translation always the most accurate? (A1)</p>
+        <p class="ans">Languages differ in grammar and idiom. A literal swap can be <strong>confusing or wrong</strong> &mdash; a reliable translation conveys the correct <i>idea</i>, without doctrinal bias, and keeps God's name.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt pp. 1718-1721">nwt pp. 1718-1721</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What kinds of changes were made in the revision? (A2)</p>
+        <p class="ans">Modern understandable language, Bible expressions clarified, better <strong>readability</strong>, the correct sense of gendered words, and dropping awkward markers for "you (plural)."</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt pp. 1722-1725">nwt pp. 1722-1725</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How did the Bible come down to us so reliably? (A3)</p>
+        <p class="ans">Manuscripts were copied by hand for centuries. Careful copyists &mdash; the <strong>Sopherim</strong> and later the <strong>Masoretes</strong> &mdash; guarded the Hebrew text. The Leningrad Codex is the oldest complete Hebrew manuscript, and comparing the Dead Sea Scrolls with it confirms the text was faithfully preserved.</p>
+        <p class="ans">Small copy differences don't shake our faith &mdash; they're minor, and no teaching depends on a doubtful verse. Spurious verses (like the long ending of Mark 16 and <a class="wol" data-q="John 7:53-8:11">John 7:53&ndash;8:11</a>) were left out or footnoted for honesty.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt pp. 1726-1730">nwt pp. 1726-1730</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">The Divine Name <span class="n">&middot; Appendix A4&ndash;A5</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> God has a name &mdash; Jehovah &mdash; and it belongs in the Bible, in both the Hebrew and the Greek Scriptures.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why is God's name missing from many translations &mdash; and why does the NWT use "Jehovah"? (A4)</p>
+        <p class="ans">Superstition and tradition led translators to replace the name with titles like "LORD." But the Tetragrammaton (YHWH) appears about <strong>7,000 times</strong> in the Hebrew text. "Jehovah" is the most familiar English form, so the NWT restores it.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt pp. 1731-1735">nwt pp. 1731-1735</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What does the name Jehovah mean?</p>
+        <p class="ans">It means "<strong>He Causes to Become</strong>" &mdash; Jehovah becomes whatever is needed to fulfil his purpose. Its meaning isn't limited to the words at Exodus 3:14; he can become anything required to accomplish his will.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Exodus 3:14">Ex. 3:14</a><span class="sep">&middot;</span><a class="wol" data-q="nwt p. 1735">nwt p. 1735</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why does the name appear in the Christian Greek Scriptures too? (A5)</p>
+        <p class="ans">Where the Greek text quotes the Hebrew Scriptures that contained the divine name, the NWT restores it &mdash; appearing <strong>237 times</strong>. There's solid evidence the name was in the original writings, and it helps readers see Jehovah clearly in the "New Testament" too.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt pp. 1736-1743">nwt pp. 1736-1743</a></p>
+        <div class="say"><b>Say it your way:</b> Finish this for a comment: "One feature of the New World Translation that has built my confidence in it is&hellip;"</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Your quick prep plan &#9989;</h2>
+    <ul>
+      <li><b>Have 2 facts ready</b> you could share at a door: e.g., God's name appears ~7,000 times; the Dead Sea Scrolls confirm the text.</li>
+      <li><b>Skim the real appendix:</b> open <a class="wol" data-q="nwt pp. 1718-1721">nwt pp. 1718-1721</a> once so it feels familiar.</li>
+      <li><b>1 personal "why":</b> be ready to say what builds <i>your</i> confidence in the translation.</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>

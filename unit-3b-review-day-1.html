@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 (b) — Review, Day 1 — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+
+  /* collapsible How-to */
+  details.howto{padding:0;}
+  details.howto>summary{cursor:pointer; list-style:none; padding:11px 18px; font-size:1.02em;
+    font-weight:700; letter-spacing:0; user-select:none; display:flex; align-items:center; gap:9px;}
+  details.howto>summary::-webkit-details-marker{display:none;}
+  details.howto>summary::before{content:"\25B6"; font-size:.75em; opacity:.65; transition:transform .15s;}
+  details.howto[open]>summary::before{transform:rotate(90deg);}
+  details.howto>summary:hover{color:var(--sayb);}
+  details.howto ul{margin:.1em 0 2px; padding:0 20px 14px 2.5em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 3 (b)</p>
+    <h1>Review &mdash; Day 1</h1>
+    <p class="sub">Recap notes for Units 1(b), 2(a), 2(b), 3(a) from "Fully Accomplish Your Ministry" (pt14).</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li>This is the <b>Day 1 review</b> &mdash; a fast recap of Units 1(b), 2(a), 2(b), and 3(a).</li>
+      <li>Each section has its <b>theme verse</b> and a few review questions with short answers to jog your memory.</li>
+      <li><b>Blue links</b> open the source. Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Review: Unit 1(b) <span class="n">&middot; Fortify Your Relationship With Jehovah</span></div>
+    <div class="body">
+      <div class="scrip"><a class="wol ref" data-q="Psalm 77:12">Psalm 77:12</a> &mdash; "I will meditate on all your activity."</div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>Why, despite a busy pioneer routine, do we make time for study, meditation, and prayer?</p>
+        <p class="ans">Because these are the <strong>lifelines</strong> that keep our friendship with Jehovah strong &mdash; nothing matters more, so we protect the time.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>How does meditation lead to a more intimate relationship with God?</p>
+        <p class="ans">It moves truth from head to <strong>heart</strong> &mdash; reflecting on Jehovah's qualities and acts makes our love personal and deep.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>How do we benefit from reflecting on Jehovah's answers to our prayers?</p>
+        <p class="ans">Seeing him respond builds our <strong>confidence</strong> that he's real, near, and listening &mdash; which makes us pray all the more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">Review: Unit 2(a) <span class="n">&middot; New World Translation, Part 1</span></div>
+    <div class="body">
+      <div class="scrip"><a class="wol ref" data-q="2 Timothy 2:15">2 Timothy 2:15</a> &mdash; "Handling the word of the truth aright."</div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>In what ways is the New World Translation superior?</p>
+        <p class="ans">It <strong>restores God's name</strong>, translates accurately from the best manuscripts, avoids doctrinal bias, and uses clear modern language.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>What principles guided the translation committee?</p>
+        <p class="ans">Convey the correct <strong>meaning</strong> (not just word-for-word), keep God's name, and stay faithful to the original text.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>What does the name Jehovah mean, and why are we sure it belongs in the Bible?</p>
+        <p class="ans">"<strong>He Causes to Become</strong>." The name appears about 7,000 times in the Hebrew text &mdash; removing it was tradition, not scholarship.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="nwt p. 1735">nwt p. 1735</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">Review: Unit 2(b) <span class="n">&middot; New World Translation, Part 2</span></div>
+    <div class="body">
+      <div class="scrip"><a class="wol ref" data-q="Psalm 119:97">Psalm 119:97</a> &mdash; "How I do love your law!"</div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>Name some appendix features &mdash; how will you use them?</p>
+        <p class="ans">Glossary, Bible Words Index, maps and charts, "Introduction to God's Word" &mdash; for <strong>study, meeting prep, and teaching</strong> others.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>What do you recall about footnotes and marginal references?</p>
+        <p class="ans">Footnotes give alternate/literal meanings ("Or," "Lit."); cross-references link parallel verses and <strong>fulfilled prophecy</strong>.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>How can you build enthusiasm for the New World Translation?</p>
+        <p class="ans">By <strong>showing</strong> people its features door to door and on studies &mdash; enthusiasm is contagious when you use the tool yourself.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block life">
+    <div class="band">Review: Unit 3(a) <span class="n">&middot; Keep Pace With Spiritual Enlightenment</span></div>
+    <div class="body">
+      <div class="scrip"><a class="wol ref" data-q="Luke 12:12">Luke 12:12</a> &mdash; "The holy spirit will teach you."</div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>How did true servants respond to enlightenment in the first century, and today?</p>
+        <p class="ans">Then and now: they <strong>trust the arrangement</strong> Jehovah is using, accept new light humbly, and move ahead united.</p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>Why is it important for pioneers to stay up-to-date &mdash; and how will you?</p>
+        <p class="ans">To avoid being "<strong>left behind</strong>." By keeping up with our publications, meetings, and jw.org, and researching under "Beliefs Clarified."</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="w10 7/15 p. 24">w10 7/15 p. 24, par. 15</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">&#9679;</span>What recent "flash of light" have you personally appreciated?</p>
+        <p class="ans">Your own answer &mdash; pick one doctrinal, moral, or organizational refinement and say why it strengthened your faith.</p>
+        <div class="say"><b>Say it your way:</b> Jot one sentence for each unit above &mdash; that's four ready comments for the review.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Review-day tip &#9989;</h2>
+    <ul>
+      <li>You don't need long answers &mdash; <b>one clear sentence per question</b> is perfect for a review.</li>
+      <li>Star the two questions you feel most confident on, and comment on those.</li>
+      <li>Skim each theme verse once more before class.</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>

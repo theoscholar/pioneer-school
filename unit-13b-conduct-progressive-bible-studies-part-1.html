@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 13 (b) — Conduct Progressive Bible Studies, Part 1 — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 13 (b)</p>
+    <h1>Conduct Progressive Bible Studies &mdash; Part 1</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14) and the New World Translation.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li><b>Heart of it</b> lines give the big idea before the questions.</li>
+      <li><b>Model answer = a starting point.</b> Say it your own way when you comment.</li>
+      <li><b>Blue links open the source</b> on the Watchtower Online Library; the book's cited references sit in the "&#128269; Look it up" line.</li>
+      <li>Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Opening Discussion <span class="n">&middot; learn from the Master Teacher</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Teaching is how we fulfil the commission to make disciples. Jesus stirred minds and hearts &mdash; and we can grow to do the same. Our teaching actually saves lives.</p>
+      <p>Whether on a mountainside or on a road, what Jesus said &mdash; and how he said it &mdash; left a lasting impression. Paul urged us to "pay constant attention to yourself and to your teaching," because doing so leads to <strong>the saving of lives</strong>. What greater motivation could we have?</p>
+      <div class="scrip"><a class="wol ref" data-q="1 Timothy 4:16">1 Timothy 4:16</a> &mdash; "Pay constant attention to yourself and to your teaching&hellip; you will save both yourself and those who listen to you."</div>
+      <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Luke 6:40">Luke 6:40</a><span class="sep">&middot;</span><a class="wol" data-q="Matthew 28:20">Matt. 28:20</a></p>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">Our Grand Instructor &amp; the Master Teacher <span class="n">&middot; the best examples</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jehovah is the greatest Teacher, and Jesus the Master Teacher. Studying how they teach makes us better teachers.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How are we taught by Jehovah, the Grand Instructor?</p>
+        <p class="ans">Through his Word, his creation, his spirit, and his organization &mdash; "your own eyes will see your Grand Instructor." His holy spirit still functions as a <strong>teacher</strong> today, bringing things to our minds.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Isaiah 30:20, 21">Isa. 30:20, 21</a><span class="sep">&middot;</span><a class="wol" data-q="John 14:26">John 14:26</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why was Jesus such an outstanding teacher &mdash; and what was his motive?</p>
+        <p class="ans">He based his teaching on <strong>God's Word</strong>, not himself; he sought his Father's glory, not his own. He loved both the truths he taught and the people &mdash; and mastered teaching methods. We avoid drawing attention to ourselves, which could ensnare us and our student.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="John 7:16">John 7:16</a><span class="sep">&middot;</span><a class="wol" data-q="John 7:18">John 7:18</a><span class="sep">&middot;</span><a class="wol" data-q="Matthew 7:28, 29">Matt. 7:28, 29</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">Preparing to Conduct Studies <span class="n">&middot; the student's needs in mind</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Good teaching starts long before the study &mdash; with prayerful preparation aimed at <strong>reaching the student's heart</strong>.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What four things made Ezra an effective teacher?</p>
+        <p class="ans">He <strong>prepared his heart</strong> to (1) consult God's law, (2) practice it, and (3) teach it. His example: know it, live it, love it, then teach it.</p>
+        <div class="scrip"><a class="wol ref" data-q="Ezra 7:10">Ezra 7:10</a> &mdash; "Ezra had prepared his heart to consult the law of Jehovah and to practice it, and to teach&hellip;"</div>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="2 Samuel 12:1-7">2 Sam. 12:1-7</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What does it mean to prepare with the student's needs in mind?</p>
+        <p class="ans">Ask: "<strong>What does the student need? What might he struggle to accept? How can I reach his heart?</strong>" Begin with prayer for him, note the lesson title, "read" scriptures, artwork, videos, and summary &mdash; and mark key points. It's more than looking up scriptures; it's touching the heart.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Acts 16:14">Acts 16:14</a><span class="sep">&middot;</span><a class="wol" data-q="Proverbs 15:28">Prov. 15:28</a><span class="sep">&middot;</span><a class="wol" data-q="w20.10 p. 8">w20.10 p. 8</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block life">
+    <div class="band">Help Your Student Prepare <span class="n">&middot; teach them to study</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> A student who prepares &mdash; reading ahead, marking answers, thinking how to say them in his own words &mdash; is on the road to real progress.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How can showing your studied copy and encouraging your own methods help the student?</p>
+        <p class="ans">"Everyone perfectly instructed will be <strong>like his teacher</strong>." Show him how you mark answers and look up scriptures, and encourage him to answer in <strong>his own words</strong> &mdash; then prepare a lesson together once.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Luke 6:40">Luke 6:40</a><span class="sep">&middot;</span><a class="wol" data-q="w20.10 p. 8">w20.10 p. 8, par. 9</a></p>
+        <div class="say"><b>Say it your way:</b> What's one habit you'd love to help a student build &mdash; and how would you model it?</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Your quick prep plan &#9989;</h2>
+    <ul>
+      <li><b>3 comments ready:</b> how Jehovah teaches us, Ezra's example, and preparing with the student's heart in mind.</li>
+      <li><b>1 scripture to read aloud:</b> <a class="wol" data-q="1 Timothy 4:16">1 Timothy 4:16</a> or <a class="wol" data-q="Ezra 7:10">Ezra 7:10</a>.</li>
+      <li><b>Prepare a real lesson</b> from <i>Enjoy Life Forever!</i> with one student's needs in mind.</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>

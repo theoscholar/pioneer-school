@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 (b) — Think in Terms of Bible Principles — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 10 (b)</p>
+    <h1>Think in Terms of Bible Principles</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14) and the New World Translation.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li><b>Heart of it</b> lines give the big idea before the questions.</li>
+      <li><b>Model answer = a starting point.</b> Say it your own way when you comment.</li>
+      <li><b>Blue links open the source</b> on the Watchtower Online Library; the book's cited references sit in the "&#128269; Look it up" line.</li>
+      <li>Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Opening Discussion <span class="n">&middot; truths that never change</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Principles are timeless truths behind God's laws. Learning to think in principles &mdash; not just rules &mdash; is the key to wise decisions.</p>
+      <p>Jehovah built the universe to run on unchanging principles. A wise Christian learns to <strong>love</strong> them, because understanding them helps us make sound choices that reflect godly wisdom &mdash; even in situations no specific law covers.</p>
+      <div class="scrip"><a class="wol ref" data-q="Proverbs 4:7">Proverbs 4:7</a> &mdash; "Wisdom is the most important thing, so acquire wisdom."</div>
+      <div class="scrip"><a class="wol ref" data-q="Proverbs 3:6">Proverbs 3:6</a> &mdash; "In all your ways take notice of him, and he will make your paths straight."</div>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">Recognizing Principles <span class="n">&middot; the truth behind the law</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> A law tells you <i>what</i> to do; a principle tells you <i>why</i>. See the "why," and you can act wisely even where no rule spells it out.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What are principles, and how do they differ from laws? (an example)</p>
+        <p class="ans">A <strong>law</strong> is specific: "You must not eat blood." The <strong>principles</strong> behind it are timeless: life is in the blood, life belongs to God, and the Creator has authority over creation. The law can end; the principle endures.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Leviticus 17:11, 14">Lev. 17:11, 14</a><span class="sep">&middot;</span><a class="wol" data-q="Psalm 36:9">Ps. 36:9</a><span class="sep">&middot;</span><a class="wol" data-q="Revelation 4:11">Rev. 4:11</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why is it beneficial to think and act on principles &mdash; and how do they refute false teachings?</p>
+        <p class="ans">Principles move us toward <strong>maturity</strong> and help us "perceive what the will of Jehovah is." They also expose falsehoods &mdash; e.g., the principle that God is supreme and the soul dies refutes the Trinity and the immortal soul.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Hebrews 6:1">Heb. 6:1</a><span class="sep">&middot;</span><a class="wol" data-q="1 Corinthians 10:11">1 Cor. 10:11</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">Become a Person of Principle <span class="n">&middot; like Jesus</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Jesus reasoned from principles &mdash; and so can we. Training our "powers of discernment" lets us distinguish right from wrong for ourselves.</p>
+      <div class="scrip"><a class="wol ref" data-q="Hebrews 5:14">Hebrews 5:14</a> &mdash; those who "through use have their powers of discernment trained to distinguish both right and wrong."</div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How did Jesus use principles when tempted, and when teaching?</p>
+        <p class="ans">Against the Devil he answered each temptation with a <strong>principle from God's Word</strong>. In the Sermon on the Mount he took his listeners beyond the letter of the law to the heart behind it &mdash; dignifying them by helping them think.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Matthew 4:1-10">Matt. 4:1-10</a><span class="sep">&middot;</span><a class="wol" data-q="Matthew 5:17-48">Matt. 5:17-48</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How can Bible principles guide real decisions &mdash; and why must <i>you</i> apply them?</p>
+        <p class="ans">On questions like employment, education, dress, or relocating, we search out the principles and let them steer us &mdash; refusing to hunt for "<strong>loopholes</strong>." A mature friend can help you find principles, but "each one will carry his own load" &mdash; the application is yours.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Ephesians 5:1">Eph. 5:1</a><span class="sep">&middot;</span><a class="wol" data-q="Galatians 6:5">Gal. 6:5</a><span class="sep">&middot;</span><a class="wol" data-q="Philippians 4:8">Phil. 4:8</a></p>
+        <div class="say"><b>Say it your way:</b> Name one Bible principle that has improved your life &mdash; and how. That's a great comment.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Your quick prep plan &#9989;</h2>
+    <ul>
+      <li><b>3 comments ready:</b> the difference between a law and a principle, how Jesus reasoned, and a principle that helped you.</li>
+      <li><b>1 scripture to read aloud:</b> <a class="wol" data-q="Proverbs 4:7">Proverbs 4:7</a> or <a class="wol" data-q="Hebrews 5:14">Hebrews 5:14</a>.</li>
+      <li><b>Try it:</b> pick one everyday decision and ask, "What principle applies here?"</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 11 (a) — Examine Your Spiritual Progress — Study Notes</title>
+<style>
+  :root{
+    --bg:#14161a; --ink:#e6e2d8; --card:#1e2128; --line:#343a44; --linehover:#55606e;
+    --person:#4db3aa; --way:#e0983f; --truth:#a884d6; --life:#5cb56e; --bandtext:#14161a;
+    --scripture:#262a31; --scripborder:#6b5d3a; --hibg:#3b3418; --hitext:#ffe08a;
+    --lookupbg:#22262e; --sayblue:#1c2733; --sayborder:#3a5a7a; --sayb:#8fc0ef;
+    --prepbg:#17251a; --prepborder:#2f5236; --link:#7fb8e6; --linkhover:#263646;
+    --fs:19px; --lh:1.7; --ls:0.02em; --ws:0.04em;
+    --font:'Segoe UI', Verdana, Tahoma, 'Century Gothic', system-ui, sans-serif;
+  }
+  body.light{
+    --bg:#faf3e3; --ink:#2b2b33; --card:#fffaf0; --line:#e4d9bf; --linehover:#c9b98f;
+    --person:#2e6f6a; --way:#b5651d; --truth:#6a4c93; --life:#2f6d3c; --bandtext:#ffffff;
+    --scripture:#f3ecd8; --scripborder:#cdbf98; --hibg:#fff4cf; --hitext:#2b2b33;
+    --lookupbg:#f7f1e0; --sayblue:#eef4fb; --sayborder:#9cc0e6; --sayb:#2b5a86;
+    --prepbg:#eef7ee; --prepborder:#b8dcb8; --link:#1c5b8c; --linkhover:#dcebf7;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font);
+    font-size:var(--fs); line-height:var(--lh); letter-spacing:var(--ls); word-spacing:var(--ws);
+    margin:0; padding:0 16px 80px; text-align:left;}
+  .wrap{max-width:820px; margin:0 auto;}
+  .controls{position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:2px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 0; margin-bottom:8px;}
+  .controls button{font-family:var(--font); font-size:15px; cursor:pointer; border:2px solid var(--line);
+    background:var(--card); color:var(--ink); border-radius:10px; padding:7px 12px; letter-spacing:0;}
+  .controls button:hover{border-color:var(--linehover);}
+  .controls .tag{font-size:14px; opacity:.7; margin-left:auto; letter-spacing:0;}
+  header.doc{padding:26px 0 6px;}
+  .kicker{font-size:15px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:0;}
+  h1{font-size:1.85em; line-height:1.25; margin:.15em 0 .3em; letter-spacing:0;}
+  .sub{font-size:.95em; opacity:.75; margin:0;}
+  a.wol{color:var(--link); text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+    letter-spacing:0; word-spacing:normal; white-space:nowrap;}
+  a.wol:hover{background:var(--linkhover); border-radius:3px;}
+  .howto{background:var(--card); border:2px solid var(--line); border-radius:14px; padding:16px 20px; margin:22px 0;}
+  .howto h2{margin:.1em 0 .4em; font-size:1.15em; letter-spacing:0;}
+  .howto ul{margin:.3em 0; padding-left:1.2em;} .howto li{margin:.35em 0;}
+  section.block{margin:34px 0 10px;}
+  .band{color:var(--bandtext); border-radius:12px 12px 0 0; padding:12px 18px; font-size:1.25em;
+    font-weight:700; letter-spacing:0; display:flex; align-items:baseline; gap:10px;}
+  .band .n{font-size:.8em; opacity:.85; font-weight:700;}
+  .body{background:var(--card); border:2px solid var(--line); border-top:none;
+    border-radius:0 0 12px 12px; padding:6px 18px 18px;}
+  .person .band{background:var(--person);} .person .body{border-color:var(--person);}
+  .way .band{background:var(--way);} .way .body{border-color:var(--way);}
+  .truth .band{background:var(--truth);} .truth .body{border-color:var(--truth);}
+  .life .band{background:var(--life);} .life .body{border-color:var(--life);}
+  .q{margin:20px 0 8px; padding-top:14px; border-top:1px dashed var(--line);}
+  .q:first-of-type{border-top:none;}
+  .q .ask{font-weight:700;}
+  .q .ask .qmark{display:inline-block; min-width:1.6em; margin-right:.3em; color:var(--way); font-weight:800;}
+  .ans{margin:.5em 0;}
+  .ans strong{background:var(--hibg); color:var(--hitext); padding:0 3px; border-radius:3px;}
+  .subhead{font-weight:800; font-size:1.05em; margin:18px 0 2px; color:var(--ink); opacity:.92; letter-spacing:0;}
+  .lookup{font-size:.85em; margin:.5em 0 .2em; opacity:.95; background:var(--lookupbg); border-radius:8px; padding:6px 10px;}
+  .lookup .mag{opacity:.7; margin-right:4px;} .lookup .sep{opacity:.4; padding:0 5px;}
+  .scrip{background:var(--scripture); border-left:5px solid var(--scripborder); border-radius:8px;
+    padding:10px 14px; margin:.6em 0; font-size:.96em;}
+  .scrip .ref{font-weight:700; display:inline-block; margin-bottom:2px;}
+  .say{background:var(--sayblue); border:2px dashed var(--sayborder); border-radius:10px;
+    padding:10px 14px; margin:.7em 0 .2em; font-size:.95em;}
+  .say b{color:var(--sayb);}
+  .titles{background:var(--card); border:2px solid var(--line); border-radius:12px; padding:8px 20px; margin-top:14px;}
+  .titles h3{letter-spacing:0;} .titles li{margin:.3em 0;}
+  .prep{background:var(--prepbg); border:2px solid var(--prepborder); border-radius:14px; padding:16px 20px; margin:30px 0;}
+  .prep h2{margin:.1em 0 .4em; letter-spacing:0; font-size:1.15em;}
+  .footer{opacity:.6; font-size:.82em; margin:34px 0 10px; text-align:center; letter-spacing:0;}
+  body.dys{--ls:.06em; --ws:.16em; --lh:1.95;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <button onclick="fs(1)">A+ bigger</button>
+    <button onclick="fs(-1)">A&minus; smaller</button>
+    <button onclick="document.body.classList.toggle('dys')">Extra spacing</button>
+    <button onclick="document.body.classList.toggle('light')">&#9728; Light mode</button>
+    <span class="tag">Tap a button to make reading comfy</span>
+  </div>
+  <header class="doc">
+    <p class="kicker">Pioneer Service School &middot; Unit 11 (a)</p>
+    <h1>Examine Your Spiritual Progress</h1>
+    <p class="sub">Prep notes from "Fully Accomplish Your Ministry" (pt14) and the New World Translation.</p>
+  </header>
+
+  <details class="howto">
+    <summary>How to use these notes &#128161;</summary>
+    <ul>
+      <li><b>Heart of it</b> lines give the big idea before the questions.</li>
+      <li><b>Model answer = a starting point.</b> Say it your own way when you comment.</li>
+      <li><b>Blue links open the source</b> on the Watchtower Online Library; the book's cited references sit in the "&#128269; Look it up" line.</li>
+      <li>Top buttons: bigger text, extra spacing, light mode.</li>
+    </ul>
+  </details>
+
+  <section class="block person">
+    <div class="band">Opening Discussion <span class="n">&middot; what is a spiritual person?</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> A spiritual person is <strong>God-oriented</strong> &mdash; always trying to learn how Jehovah thinks and bring their whole life into harmony with him. Progress in this is a matter of life.</p>
+      <p>The Bible praises the person who follows God's ways and has "the mind of Christ." Becoming and staying that kind of person is vital, "for the course we choose leads to life or death." The good news: it can be cultivated.</p>
+      <div class="scrip"><a class="wol ref" data-q="Romans 12:2">Romans 12:2</a> &mdash; "Be transformed by making your mind over, so that you may prove to yourselves the good and acceptable and perfect will of God."</div>
+      <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="1 Corinthians 2:12-16">1 Cor. 2:12-16</a><span class="sep">&middot;</span><a class="wol" data-q="Romans 8:6">Rom. 8:6</a></p>
+    </div>
+  </section>
+
+  <section class="block way">
+    <div class="band">What Builds Spirituality <span class="n">&middot; and how to check it</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Spirituality grows from feeding on God's Word and meditating &mdash; and it's measured not by privileges, but by what we <i>do</i> with what we know.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>Why is Bible reading essential, and what should we watch for as we read?</p>
+        <p class="ans">Reading is how we learn to <strong>think God's thoughts</strong> &mdash; his word is "a lamp to my foot." As we read, we look for how Jehovah views things, so we can make our own mind over to match his.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Psalm 119:105">Ps. 119:105</a><span class="sep">&middot;</span><a class="wol" data-q="Psalm 139:17">Ps. 139:17</a><span class="sep">&middot;</span><a class="wol" data-q="Ephesians 4:23, 24">Eph. 4:23, 24</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How can we honestly evaluate our own progress?</p>
+        <p class="ans">Three tools: prayerful <strong>self-analysis</strong> ("What motivates me? What are my weaknesses?"), regular feeding on the Bible with <strong>meditation</strong>, and listening to experienced, spiritually strong brothers and sisters. James warns against being a hearer who forgets &mdash; we want to be doers.</p>
+        <div class="scrip"><a class="wol ref" data-q="James 1:22-25">James 1:22-25</a> &mdash; become "not a forgetful hearer, but a doer of the work; and he will be happy in what he does."</div>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Psalm 26:2">Ps. 26:2</a><span class="sep">&middot;</span><a class="wol" data-q="2 Corinthians 13:5">2 Cor. 13:5</a><span class="sep">&middot;</span><a class="wol" data-q="Psalm 1:2, 3">Ps. 1:2, 3</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block truth">
+    <div class="band">What Does the Fruitage Reveal? <span class="n">&middot; spiritual vs physical</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Our everyday reactions show what we really are inside. The "fruitage of the spirit" grows when we open our hearts to God's spirit.</p>
+      <div class="scrip"><a class="wol ref" data-q="Galatians 5:22, 23">Galatians 5:22, 23</a> &mdash; "The fruitage of the spirit is love, joy, peace, patience, kindness, goodness, faith, mildness, self-control."</div>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How might the spiritual and the physical person differ in daily areas?</p>
+        <p class="ans">Look at the contrasts: in <strong>prayer</strong>, Jehovah's honor comes first; in <strong>study</strong>, a set schedule tames fleshly desires; in <strong>ministry</strong>, love for people drives us; at <strong>meetings</strong>, we prepare and share; in <strong>disputes</strong>, we stay calm and forgiving rather than blowing up; and under <strong>temptation</strong>, we flee like the wise, not linger like the foolish young man of Proverbs 7.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Galatians 5:19-21">Gal. 5:19-21</a><span class="sep">&middot;</span><a class="wol" data-q="Proverbs 29:11">Prov. 29:11</a><span class="sep">&middot;</span><a class="wol" data-q="Ephesians 4:29">Eph. 4:29</a><span class="sep">&middot;</span><a class="wol" data-q="Proverbs 7:6-10, 21, 22">Prov. 7:6-10</a></p>
+      </div>
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>What would hinder spiritual development?</p>
+        <p class="ans">The "works of the flesh" &mdash; and subtler things like <strong>envy</strong> and pride, which make us "compare" ourselves with others. Opening our hearts to God's spirit is the antidote.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Galatians 6:3, 4">Gal. 6:3, 4</a></p>
+        <div class="say"><b>Say it your way:</b> Pick one everyday area above &mdash; what's one small change that would make you more "spiritual" in it?</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block life">
+    <div class="band">Keep Growing <span class="n">&middot; even the apostles did</span></div>
+    <div class="body">
+      <p><b>Heart of it:</b> Spiritual growth never stops. Even the apostles kept maturing &mdash; which is reassuring for all of us.</p>
+
+      <div class="q">
+        <p class="ask"><span class="qmark">Q</span>How do we know even the apostles needed to keep progressing &mdash; and why is that reassuring?</p>
+        <p class="ans">They argued over who was greatest, and even Peter &mdash; a truly spiritual man &mdash; had more to learn. If <strong>they</strong> kept growing, we can be patient with our own progress, keeping the joy that marks a spiritual person.</p>
+        <p class="lookup"><span class="mag">&#128269;</span>Look it up: <a class="wol" data-q="Luke 22:24-27">Luke 22:24-27</a><span class="sep">&middot;</span><a class="wol" data-q="Matthew 16:16, 17">Matt. 16:16, 17</a><span class="sep">&middot;</span><a class="wol" data-q="1 Peter 1:6, 7">1 Pet. 1:6, 7</a></p>
+        <div class="say"><b>Say it your way:</b> How do you personally keep your joy while still working on growth?</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="prep">
+    <h2>Your quick prep plan &#9989;</h2>
+    <ul>
+      <li><b>3 comments ready:</b> what builds spirituality, a fruitage-of-the-spirit example, and how even the apostles kept growing.</li>
+      <li><b>1 scripture to read aloud:</b> <a class="wol" data-q="Romans 12:2">Romans 12:2</a> or <a class="wol" data-q="Galatians 5:22, 23">Galatians 5:22, 23</a>.</li>
+      <li><b>Self-check:</b> "What motivates me? What's one weakness I can work on?"</li>
+    </ul>
+  </div>
+
+  <p class="footer">Prepared for personal study &middot; Pioneer Service School textbook "Fully Accomplish Your Ministry" (pt14). Blue links open on wol.jw.org.</p>
+</div>
+<script>
+  var step = 0;
+  function fs(dir){ step = Math.max(-3, Math.min(6, step + dir));
+    document.documentElement.style.setProperty('--fs', (19 + step*1.5) + 'px'); }
+  var WOL = 'https://wol.jw.org/en/wol/l/r1/lp-e?q=';
+  document.querySelectorAll('a.wol').forEach(function(a){
+    var q = a.getAttribute('data-q') || a.textContent;
+    a.href = WOL + encodeURIComponent(q);
+    a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    a.addEventListener('click', function(e){ e.preventDefault();
+      var w = window.open(a.href,'wolPopup','width=520,height=780,scrollbars=yes,resizable=yes,menubar=no,toolbar=no');
+      if(!w){ window.open(a.href,'_blank'); } });
+  });
+</script>
+</body>
+</html>
